@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
   <meta name="description" content="2026年2月台中海線三天兩夜家庭旅行行程">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap"
+    rel="stylesheet">
   <style>
     /* ========== CSS Variables ========== */
     :root {
@@ -28,7 +31,9 @@
     }
 
     /* ========== Reset & Base ========== */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -80,7 +85,9 @@
       scrollbar-width: none;
     }
 
-    .nav-inner::-webkit-scrollbar { display: none; }
+    .nav-inner::-webkit-scrollbar {
+      display: none;
+    }
 
     .nav-link {
       color: rgba(255, 255, 255, 0.7);
@@ -94,7 +101,8 @@
       letter-spacing: 0.02em;
     }
 
-    .nav-link:hover, .nav-link.active {
+    .nav-link:hover,
+    .nav-link.active {
       color: var(--white);
       background: rgba(255, 255, 255, 0.12);
     }
@@ -111,15 +119,14 @@
       text-align: center;
       overflow: hidden;
       background: linear-gradient(180deg,
-        #0B1D3A 0%,
-        #0d2847 20%,
-        #1a4a7a 40%,
-        #2d6da8 55%,
-        #e8845c 72%,
-        #f4a261 82%,
-        #ffd699 92%,
-        var(--warm-sand) 100%
-      );
+          #0B1D3A 0%,
+          #0d2847 20%,
+          #1a4a7a 40%,
+          #2d6da8 55%,
+          #e8845c 72%,
+          #f4a261 82%,
+          #ffd699 92%,
+          var(--warm-sand) 100%);
     }
 
     /* Animated clouds */
@@ -130,7 +137,7 @@
       left: -10%;
       width: 50%;
       height: 80px;
-      background: radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
       border-radius: 50%;
       animation: drift 25s ease-in-out infinite;
     }
@@ -142,14 +149,21 @@
       right: -15%;
       width: 60%;
       height: 60px;
-      background: radial-gradient(ellipse, rgba(255,255,255,0.06) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
       border-radius: 50%;
       animation: drift 30s ease-in-out infinite reverse;
     }
 
     @keyframes drift {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(80px); }
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(80px);
+      }
     }
 
     /* Sun */
@@ -167,8 +181,15 @@
     }
 
     @keyframes sunGlow {
-      0%, 100% { box-shadow: 0 0 60px rgba(255, 159, 67, 0.5), 0 0 120px rgba(255, 107, 53, 0.3); }
-      50% { box-shadow: 0 0 80px rgba(255, 159, 67, 0.6), 0 0 160px rgba(255, 107, 53, 0.4); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 60px rgba(255, 159, 67, 0.5), 0 0 120px rgba(255, 107, 53, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 0 80px rgba(255, 159, 67, 0.6), 0 0 160px rgba(255, 107, 53, 0.4);
+      }
     }
 
     .hero-content {
@@ -239,8 +260,15 @@
     }
 
     @keyframes scrollBounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(8px); }
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(8px);
+      }
     }
 
     /* Wave at bottom of hero */
@@ -752,7 +780,7 @@
       line-height: 1.5;
     }
 
-    .check-item input[type="checkbox"]:checked + label {
+    .check-item input[type="checkbox"]:checked+label {
       color: var(--text-muted);
       text-decoration: line-through;
     }
@@ -807,6 +835,195 @@
       height: 80px;
     }
 
+    /* ========== Transportation Section ========== */
+    .transport-section {
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .transport-section:nth-child(even) {
+      background: var(--white);
+    }
+
+    .transport-section:nth-child(odd) {
+      background: var(--soft-cream);
+    }
+
+    .route-planner-widget {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 48px;
+      border: 1px solid rgba(11, 29, 58, 0.04);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .route-planner-widget::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, var(--ocean-blue), var(--seafoam));
+    }
+
+    .widget-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .widget-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 8px;
+    }
+
+    .widget-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .planner-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .planner-controls {
+        flex-direction: row;
+        align-items: flex-end;
+      }
+    }
+
+    .select-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .select-group label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .planner-select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(11, 29, 58, 0.15);
+      background: var(--soft-cream);
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 1rem;
+      color: var(--text-dark);
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230B1D3A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px;
+      transition: all 0.2s;
+    }
+
+    .planner-select:focus {
+      outline: none;
+      border-color: var(--ocean-blue);
+      box-shadow: 0 0 0 4px rgba(21, 101, 192, 0.08);
+    }
+
+    .exchange-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(11, 29, 58, 0.03);
+      border: 1px solid rgba(11, 29, 58, 0.1);
+      color: var(--ocean-blue);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      align-self: center;
+      margin: 4px 0;
+    }
+
+    .exchange-btn:hover {
+      background: var(--ocean-blue);
+      color: var(--white);
+      transform: rotate(180deg);
+      border-color: var(--ocean-blue);
+    }
+
+    @media (min-width: 768px) {
+      .exchange-btn {
+        margin: 0 8px 2px 8px;
+      }
+    }
+
+    .planner-submit-btn {
+      background: var(--ocean-blue);
+      color: var(--white);
+      border: none;
+      padding: 16px 24px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(21, 101, 192, 0.2);
+      width: 100%;
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.02em;
+    }
+
+    .planner-submit-btn:hover {
+      background: var(--deep-navy);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(11, 29, 58, 0.15);
+    }
+
+    .quick-routes {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .quick-route-btn {
+      background: rgba(21, 101, 192, 0.06);
+      color: var(--ocean-blue);
+      border: 1px solid rgba(21, 101, 192, 0.1);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .quick-route-btn:hover {
+      background: var(--ocean-blue);
+      color: var(--white);
+    }
+
     /* ========== Responsive ========== */
     @media (max-width: 640px) {
       .section {
@@ -850,19 +1067,37 @@
         bottom: 30%;
       }
 
-      .info-grid, .packing-grid {
+      .info-grid,
+      .packing-grid {
         grid-template-columns: 1fr;
       }
     }
 
     /* ========== Print ========== */
     @media print {
-      .nav, .scroll-hint, .wave-container, .sun { display: none; }
-      .hero { min-height: auto; padding: 40px 20px; }
-      .timeline-item, .info-card, .packing-card { opacity: 1; transform: none; }
+
+      .nav,
+      .scroll-hint,
+      .wave-container,
+      .sun {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 40px 20px;
+      }
+
+      .timeline-item,
+      .info-card,
+      .packing-card {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- ===== Navigation ===== -->
@@ -872,6 +1107,7 @@
       <a href="#day1" class="nav-link">Day 1</a>
       <a href="#day2" class="nav-link">Day 2</a>
       <a href="#day3" class="nav-link">Day 3</a>
+      <a href="#transport" class="nav-link">交通</a>
       <a href="#info" class="nav-link">實用資訊</a>
       <a href="#packing" class="nav-link">行李清單</a>
     </div>
@@ -889,14 +1125,17 @@
     <div class="scroll-hint">
       <span>SCROLL</span>
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
+        <path d="M12 5v14M5 12l7 7 7-7" />
       </svg>
     </div>
     <div class="wave-container">
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,70 1440,80 L1440,120 L0,120 Z" fill="var(--soft-cream)" opacity="0.6"/>
-        <path d="M0,80 C240,40 480,100 720,80 C960,60 1200,100 1440,60 L1440,120 L0,120 Z" fill="var(--soft-cream)" opacity="0.8"/>
-        <path d="M0,95 C180,70 360,110 540,90 C720,70 900,105 1080,85 C1260,65 1380,95 1440,90 L1440,120 L0,120 Z" fill="var(--soft-cream)"/>
+        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,70 1440,80 L1440,120 L0,120 Z" fill="var(--soft-cream)"
+          opacity="0.6" />
+        <path d="M0,80 C240,40 480,100 720,80 C960,60 1200,100 1440,60 L1440,120 L0,120 Z" fill="var(--soft-cream)"
+          opacity="0.8" />
+        <path d="M0,95 C180,70 360,110 540,90 C720,70 900,105 1080,85 C1260,65 1380,95 1440,90 L1440,120 L0,120 Z"
+          fill="var(--soft-cream)" />
       </svg>
     </div>
   </section>
@@ -919,7 +1158,8 @@
           <div class="hotel-detail">
             <div class="hotel-detail-label">地址</div>
             <div class="hotel-detail-value">
-              <a href="https://maps.google.com/?q=台中市梧棲區築港路築港巷66號" target="_blank" rel="noopener">台中市梧棲區築港路築港巷 66 號 ↗</a>
+              <a href="https://maps.google.com/?q=台中市梧棲區築港路築港巷66號" target="_blank" rel="noopener">台中市梧棲區築港路築港巷 66 號
+                ↗</a>
             </div>
           </div>
           <div class="hotel-detail">
@@ -974,7 +1214,8 @@
             <div class="callout-title">⚠️ 高美濕地注意事項</div>
             <ul>
               <li>木棧道開放時間依潮汐而定（漲潮前 1.5 小時封閉、漲潮後 1.5 小時重新開放）</li>
-              <li><strong>出發前務必查詢木棧道開放時間</strong>：<a href="https://gaomei.com.tw/gaomei-wetland/opening-hours/" target="_blank" rel="noopener">gaomei.com.tw ↗</a></li>
+              <li><strong>出發前務必查詢木棧道開放時間</strong>：<a href="https://gaomei.com.tw/gaomei-wetland/opening-hours/"
+                  target="_blank" rel="noopener">gaomei.com.tw ↗</a></li>
               <li>也可電洽確認：<a href="tel:04-2656-6494">04-2656-6494</a>（海岸資源漁業發展所）</li>
               <li>海邊風大，帶防風層；木棧道濕滑，小朋友注意安全</li>
               <li>官網潮汐資料可能未即時更新，<strong>出發當天務必電話確認</strong></li>
@@ -1331,7 +1572,8 @@
             <div class="spot-info">
               <div class="spot-chip">
                 <div class="spot-chip-label">地址</div>
-                <a href="https://maps.google.com/?q=台中市中區台灣大道一段145號" target="_blank" rel="noopener">台中市中區台灣大道一段 145 號 ↗</a>
+                <a href="https://maps.google.com/?q=台中市中區台灣大道一段145號" target="_blank" rel="noopener">台中市中區台灣大道一段 145 號
+                  ↗</a>
               </div>
               <div class="spot-chip">
                 <div class="spot-chip-label">營業時間</div>
@@ -1381,6 +1623,120 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Transportation ===== -->
+  <section class="transport-section" id="transport">
+    <div class="section-header">
+      <span class="section-icon">🚗</span>
+      <h2 class="section-title">交通路線</h2>
+      <p class="section-subtitle">點對點導航 & 停車攻略</p>
+    </div>
+
+    <!-- Route Planner Widget -->
+    <div class="route-planner-widget">
+      <div class="widget-header">
+        <div class="widget-title">路線規劃小幫手</div>
+        <div class="widget-subtitle">選擇起點與終點，一鍵開啟 Google Maps 導航</div>
+      </div>
+
+      <div class="planner-controls">
+        <div class="select-group">
+          <label for="route-start">起點</label>
+          <select id="route-start" class="planner-select">
+            <option value="CURRENT_LOCATION">📍 我的目前位置</option>
+            <option value="台北">🏠 台北</option>
+            <option value="台中市梧棲區築港路築港巷66號">🏨 震大金鬱金香酒店</option>
+            <option value="高美濕地">🌅 高美濕地</option>
+            <option value="台中市清水區海洋路168號">🐬 台中海洋館</option>
+            <option value="台中市清水區北堤路30號">🦞 梧棲漁港</option>
+            <option value="台中市梧棲區台灣大道十段168號">🛍️ 三井 Outlet</option>
+            <option value="台中市梧棲區八德東路頂魚寮公園">🐋 頂魚寮公園</option>
+            <option value="台中市梧棲區文昌路280號">🍢 梧棲中港觀光夜市</option>
+            <option value="台中市梧棲區大仁路一段7號">🎪 梧樂新創園區</option>
+            <option value="台中市北區館前路1號">🦕 科博館</option>
+            <option value="台中市大甲區順天路158號">🙏 大甲鎮瀾宮</option>
+          </select>
+        </div>
+
+        <button id="exchange-route" class="exchange-btn" title="交換起點與終點">
+          ⇄
+        </button>
+
+        <div class="select-group">
+          <label for="route-end">終點</label>
+          <select id="route-end" class="planner-select">
+            <option value="台中市梧棲區築港路築港巷66號" selected>🏨 震大金鬱金香酒店</option>
+            <option value="台北">🏠 台北</option>
+            <option value="高美濕地">🌅 高美濕地</option>
+            <option value="台中市清水區海洋路168號">🐬 台中海洋館</option>
+            <option value="台中市清水區北堤路30號">🦞 梧棲漁港</option>
+            <option value="台中市梧棲區台灣大道十段168號">🛍️ 三井 Outlet</option>
+            <option value="台中市梧棲區八德東路頂魚寮公園">🐋 頂魚寮公園</option>
+            <option value="台中市梧棲區文昌路280號">🍢 梧棲中港觀光夜市</option>
+            <option value="台中市梧棲區大仁路一段7號">🎪 梧樂新創園區</option>
+            <option value="台中市北區館前路1號">🦕 科博館</option>
+            <option value="台中市大甲區順天路158號">🙏 大甲鎮瀾宮</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="open-route-btn" class="planner-submit-btn">
+        <span>開啟 Google Maps 導航</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </button>
+
+      <div class="quick-routes">
+        <div style="width: 100%; text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;">
+          快速導航</div>
+        <button class="quick-route-btn" onclick="setRoute('台北', '高美濕地')">台北 ➜ 高美濕地</button>
+        <button class="quick-route-btn" onclick="setRoute('台中市梧棲區築港路築港巷66號', '台中市清水區海洋路168號')">飯店 ➜ 海洋館</button>
+        <button class="quick-route-btn" onclick="setRoute('台中市清水區北堤路30號', '台中市梧棲區八德東路頂魚寮公園')">漁港 ➜ 頂魚寮公園</button>
+        <button class="quick-route-btn" onclick="setRoute('台中市梧棲區築港路築港巷66號', '台中市梧棲區台灣大道十段168號')">飯店 ➜ 三井</button>
+        <button class="quick-route-btn" onclick="setRoute('台中市梧棲區台灣大道十段168號', '台北')">三井 ➜ 台北</button>
+      </div>
+    </div>
+
+    <!-- Static Info -->
+    <div class="info-grid">
+      <div class="info-card revealed">
+        <span class="info-card-icon">🛣️</span>
+        <h3>台北 ⇄ 台中海線</h3>
+        <ul>
+          <li><strong>推薦：</strong>國道 3 號 ➜ 國道 4 號（往清水）➜ 台 17 線</li>
+          <li><strong>避開：</strong>國道 1 號（后里-大雅段常態壅塞）</li>
+          <li><strong>替代：</strong>西濱快速道路 (台61) - 免費、不塞車、海景佳</li>
+          <li><strong>車程：</strong>平日約 2 小時，週五下午約 2.5～3 小時</li>
+        </ul>
+      </div>
+
+      <div class="info-card revealed">
+        <span class="info-card-icon">🅿️</span>
+        <h3>停車懶人包</h3>
+        <ul>
+          <li><strong>飯店：</strong>平面停車場（免費）</li>
+          <li><strong>三井 Outlet：</strong>不分平假日（免費）</li>
+          <li><strong>高美濕地：</strong>遊客中心 50元/次（含沖腳）</li>
+          <li><strong>海洋館/漁港：</strong>50元/次（兩者相鄰）</li>
+          <li><strong>頂魚寮公園：</strong>路邊白線（免費）</li>
+        </ul>
+      </div>
+
+      <div class="info-card revealed">
+        <span class="info-card-icon">💡</span>
+        <h3>駕駛小撇步</h3>
+        <ul>
+          <li>海線景點（海洋館、漁港、高美、三井）彼此距離都在 5-10 分鐘內。</li>
+          <li>週五/週日為國道尖峰，善用 <strong>1968 App</strong> 查路況。</li>
+          <li>若遇國道全線紅爆，<strong>台61西濱</strong>是您的救命稻草。</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -1566,7 +1922,7 @@
       }
 
       // Highlight active section
-      const sections = ['hotel', 'day1', 'day2', 'day3', 'info', 'packing'];
+      const sections = ['hotel', 'day1', 'day2', 'day3', 'transport', 'info', 'packing'];
       const links = document.querySelectorAll('.nav-link');
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -1649,8 +2005,45 @@
       cb.addEventListener('change', savePackingState);
     });
 
+    // ===== Route Planner Logic =====
+    function setRoute(start, end) {
+      document.getElementById('route-start').value = start;
+      document.getElementById('route-end').value = end;
+      // Scroll to widget
+      document.querySelector('.route-planner-widget').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    const startSelect = document.getElementById('route-start');
+    const endSelect = document.getElementById('route-end');
+    const exchangeBtn = document.getElementById('exchange-route');
+    const routeBtn = document.getElementById('open-route-btn');
+
+    exchangeBtn.addEventListener('click', () => {
+      const tempIndex = startSelect.selectedIndex;
+      const tempValue = startSelect.value;
+      startSelect.value = endSelect.value;
+      endSelect.value = tempValue;
+    });
+
+    routeBtn.addEventListener('click', () => {
+      const start = startSelect.value;
+      const end = endSelect.value;
+
+      let url = 'https://www.google.com/maps/dir/?api=1';
+
+      if (start !== 'CURRENT_LOCATION') {
+        url += `&origin=${encodeURIComponent(start)}`;
+      }
+
+      url += `&destination=${encodeURIComponent(end)}`;
+      url += '&travelmode=driving';
+
+      window.open(url, '_blank');
+    });
+
     // Initialize
     loadPackingState();
   </script>
 </body>
+
 </html>
