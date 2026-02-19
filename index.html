@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台中家庭旅行 2026</title>
+  <meta name="description" content="2026年2月台中海線三天兩夜家庭旅行行程">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ========== CSS Variables ========== */
+    :root {
+      --deep-navy: #0B1D3A;
+      --ocean-blue: #1565C0;
+      --sunset-coral: #FF7043;
+      --warm-sand: #F4E4C1;
+      --seafoam: #4DB6AC;
+      --soft-cream: #FFF8F0;
+      --white: #FFFFFF;
+      --text-dark: #1a1a2e;
+      --text-muted: #5a6377;
+      --shadow-sm: 0 2px 8px rgba(11, 29, 58, 0.08);
+      --shadow-md: 0 4px 20px rgba(11, 29, 58, 0.12);
+      --shadow-lg: 0 8px 40px rgba(11, 29, 58, 0.16);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    /* ========== Reset & Base ========== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 70px;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 400;
+      color: var(--text-dark);
+      background: var(--soft-cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ========== Sticky Navigation ========== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(11, 29, 58, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 0 20px;
+      transform: translateY(-100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav.visible {
+      transform: translateY(0);
+    }
+
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      height: 56px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-inner::-webkit-scrollbar { display: none; }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* ========== Hero Section ========== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(180deg,
+        #0B1D3A 0%,
+        #0d2847 20%,
+        #1a4a7a 40%,
+        #2d6da8 55%,
+        #e8845c 72%,
+        #f4a261 82%,
+        #ffd699 92%,
+        var(--warm-sand) 100%
+      );
+    }
+
+    /* Animated clouds */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 15%;
+      left: -10%;
+      width: 50%;
+      height: 80px;
+      background: radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: drift 25s ease-in-out infinite;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 25%;
+      right: -15%;
+      width: 60%;
+      height: 60px;
+      background: radial-gradient(ellipse, rgba(255,255,255,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: drift 30s ease-in-out infinite reverse;
+    }
+
+    @keyframes drift {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(80px); }
+    }
+
+    /* Sun */
+    .sun {
+      position: absolute;
+      bottom: 28%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #FFD93D 0%, #FF9F43 40%, #FF6B35 70%, transparent 100%);
+      box-shadow: 0 0 60px rgba(255, 159, 67, 0.5), 0 0 120px rgba(255, 107, 53, 0.3);
+      animation: sunGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes sunGlow {
+      0%, 100% { box-shadow: 0 0 60px rgba(255, 159, 67, 0.5), 0 0 120px rgba(255, 107, 53, 0.3); }
+      50% { box-shadow: 0 0 80px rgba(255, 159, 67, 0.6), 0 0 160px rgba(255, 107, 53, 0.4); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding: 0 24px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif TC', serif;
+      font-weight: 900;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1rem, 3vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .hero-info {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+
+    .scroll-hint svg {
+      width: 20px;
+      height: 20px;
+      stroke: rgba(255, 255, 255, 0.5);
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* Wave at bottom of hero */
+    .wave-container {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      z-index: 5;
+    }
+
+    .wave-container svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* ========== Sections ========== */
+    .section {
+      padding: 80px 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif TC', serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--deep-navy);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    /* ========== Hotel Card ========== */
+    .hotel-section {
+      background: linear-gradient(135deg, var(--deep-navy) 0%, #142d54 100%);
+      padding: 80px 20px;
+    }
+
+    .hotel-card {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      color: var(--white);
+    }
+
+    .hotel-header .section-icon {
+      color: var(--warm-sand);
+    }
+
+    .hotel-header .section-title {
+      color: var(--white);
+    }
+
+    .hotel-header .section-subtitle {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hotel-name {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--warm-sand);
+      margin-bottom: 20px;
+    }
+
+    .hotel-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .hotel-detail {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .hotel-detail-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 6px;
+    }
+
+    .hotel-detail-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .hotel-detail-value a {
+      color: var(--seafoam);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .hotel-detail-value a:hover {
+      color: var(--warm-sand);
+    }
+
+    /* ========== Day Timeline ========== */
+    .day-section {
+      padding: 80px 20px;
+    }
+
+    .day-section:nth-child(odd) {
+      background: var(--soft-cream);
+    }
+
+    .day-section:nth-child(even) {
+      background: var(--white);
+    }
+
+    .day-tag {
+      display: inline-block;
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--sunset-coral);
+      background: rgba(255, 112, 67, 0.1);
+      padding: 4px 16px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--ocean-blue), var(--seafoam), var(--sunset-coral));
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .timeline-item.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -34px;
+      top: 18px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--ocean-blue);
+      border: 3px solid var(--soft-cream);
+      box-shadow: 0 0 0 2px var(--ocean-blue);
+      z-index: 2;
+    }
+
+    .day-section:nth-child(even) .timeline-dot {
+      border-color: var(--white);
+    }
+
+    .timeline-time {
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.9rem;
+      color: var(--sunset-coral);
+      margin-bottom: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .timeline-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(11, 29, 58, 0.04);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .timeline-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .day-section:nth-child(even) .timeline-card {
+      background: var(--soft-cream);
+    }
+
+    .timeline-card h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 8px;
+    }
+
+    .timeline-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ========== Info Callout ========== */
+    .callout {
+      background: linear-gradient(135deg, rgba(77, 182, 172, 0.08), rgba(21, 101, 192, 0.06));
+      border-left: 4px solid var(--seafoam);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 20px 24px;
+      margin-top: 12px;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--deep-navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .callout li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 3px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .callout li::before {
+      content: '·';
+      position: absolute;
+      left: 4px;
+      font-weight: 700;
+      color: var(--seafoam);
+    }
+
+    /* ========== Expandable Details ========== */
+    .spot-details {
+      margin-top: 16px;
+    }
+
+    .spot-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 1px solid rgba(21, 101, 192, 0.2);
+      color: var(--ocean-blue);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-family: 'Noto Sans TC', sans-serif;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .spot-toggle:hover {
+      background: rgba(21, 101, 192, 0.06);
+      border-color: var(--ocean-blue);
+    }
+
+    .spot-toggle .arrow {
+      transition: transform 0.3s ease;
+      font-size: 0.7rem;
+    }
+
+    .spot-toggle.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .spot-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .spot-info.open {
+      max-height: 600px;
+      opacity: 1;
+    }
+
+    .spot-chip {
+      background: rgba(11, 29, 58, 0.03);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 0.82rem;
+    }
+
+    .spot-chip-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .spot-chip a {
+      color: var(--ocean-blue);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .spot-chip a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== Practical Info ========== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(11, 29, 58, 0.04);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .info-card.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .info-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .info-card h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 12px;
+    }
+
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-card li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding: 4px 0;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .info-card li::before {
+      content: '›';
+      position: absolute;
+      left: 4px;
+      color: var(--sunset-coral);
+      font-weight: 700;
+    }
+
+    .info-card a {
+      color: var(--ocean-blue);
+      text-decoration: none;
+    }
+
+    .info-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== Packing List ========== */
+    .packing-section {
+      background: linear-gradient(180deg, var(--soft-cream) 0%, var(--warm-sand) 100%);
+      padding: 80px 20px;
+    }
+
+    .packing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .packing-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .packing-card.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .packing-card h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .packing-card h3 span {
+      font-size: 1.2rem;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    .check-item input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border: 2px solid rgba(11, 29, 58, 0.2);
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+      top: 1px;
+      transition: all 0.2s ease;
+      background: var(--white);
+    }
+
+    .check-item input[type="checkbox"]:checked {
+      background: var(--seafoam);
+      border-color: var(--seafoam);
+    }
+
+    .check-item input[type="checkbox"]:checked::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    .check-item label {
+      font-size: 0.88rem;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      line-height: 1.5;
+    }
+
+    .check-item input[type="checkbox"]:checked + label {
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .packing-progress {
+      text-align: center;
+      margin-bottom: 32px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .progress-bar-outer {
+      width: 100%;
+      height: 8px;
+      background: rgba(11, 29, 58, 0.08);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      background: linear-gradient(90deg, var(--seafoam), var(--ocean-blue));
+      border-radius: 4px;
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 0%;
+    }
+
+    .progress-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ========== Footer ========== */
+    .footer {
+      background: var(--deep-navy);
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.82rem;
+    }
+
+    .footer a {
+      color: var(--seafoam);
+      text-decoration: none;
+    }
+
+    .footer-wave {
+      background: linear-gradient(180deg, var(--warm-sand) 0%, var(--deep-navy) 100%);
+      height: 80px;
+    }
+
+    /* ========== Responsive ========== */
+    @media (max-width: 640px) {
+      .section {
+        padding: 60px 16px;
+      }
+
+      .day-section {
+        padding: 60px 16px;
+      }
+
+      .timeline {
+        padding-left: 32px;
+      }
+
+      .timeline::before {
+        left: 8px;
+      }
+
+      .timeline-dot {
+        left: -28px;
+        width: 12px;
+        height: 12px;
+      }
+
+      .timeline-card {
+        padding: 18px;
+      }
+
+      .hotel-details {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-link {
+        font-size: 0.78rem;
+        padding: 5px 12px;
+      }
+
+      .sun {
+        width: 80px;
+        height: 80px;
+        bottom: 30%;
+      }
+
+      .info-grid, .packing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========== Print ========== */
+    @media print {
+      .nav, .scroll-hint, .wave-container, .sun { display: none; }
+      .hero { min-height: auto; padding: 40px 20px; }
+      .timeline-item, .info-card, .packing-card { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hotel" class="nav-link">住宿</a>
+      <a href="#day1" class="nav-link">Day 1</a>
+      <a href="#day2" class="nav-link">Day 2</a>
+      <a href="#day3" class="nav-link">Day 3</a>
+      <a href="#info" class="nav-link">實用資訊</a>
+      <a href="#packing" class="nav-link">行李清單</a>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="sun"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Family Trip 2026</div>
+      <h1>台中家庭旅行</h1>
+      <p class="hero-subtitle">2026 / 2 / 20 — 2 / 22</p>
+      <p class="hero-info">三天兩夜 · 2 大 2 小 · 海線慢旅行</p>
+    </div>
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+    <div class="wave-container">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,70 1440,80 L1440,120 L0,120 Z" fill="var(--soft-cream)" opacity="0.6"/>
+        <path d="M0,80 C240,40 480,100 720,80 C960,60 1200,100 1440,60 L1440,120 L0,120 Z" fill="var(--soft-cream)" opacity="0.8"/>
+        <path d="M0,95 C180,70 360,110 540,90 C720,70 900,105 1080,85 C1260,65 1380,95 1440,90 L1440,120 L0,120 Z" fill="var(--soft-cream)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Hotel ===== -->
+  <section class="hotel-section" id="hotel">
+    <div class="hotel-card">
+      <div class="hotel-header section-header">
+        <span class="section-icon">🏨</span>
+        <h2 class="section-title">住宿</h2>
+        <p class="section-subtitle">兩晚住同一間，不用換飯店</p>
+      </div>
+      <div>
+        <div class="hotel-name">震大金鬱金香酒店</div>
+        <div class="hotel-details">
+          <div class="hotel-detail">
+            <div class="hotel-detail-label">房型</div>
+            <div class="hotel-detail-value">高級四人房</div>
+          </div>
+          <div class="hotel-detail">
+            <div class="hotel-detail-label">地址</div>
+            <div class="hotel-detail-value">
+              <a href="https://maps.google.com/?q=台中市梧棲區築港路築港巷66號" target="_blank" rel="noopener">台中市梧棲區築港路築港巷 66 號 ↗</a>
+            </div>
+          </div>
+          <div class="hotel-detail">
+            <div class="hotel-detail-label">電話</div>
+            <div class="hotel-detail-value">
+              <a href="tel:04-2657-7001">04-2657-7001</a>
+            </div>
+          </div>
+          <div class="hotel-detail">
+            <div class="hotel-detail-label">Check-in</div>
+            <div class="hotel-detail-value">2/20（五）15:00 ～ 00:00</div>
+          </div>
+          <div class="hotel-detail">
+            <div class="hotel-detail-label">Check-out</div>
+            <div class="hotel-detail-value">2/22（日）12:00 前</div>
+          </div>
+          <div class="hotel-detail">
+            <div class="hotel-detail-label">官網</div>
+            <div class="hotel-detail-value">
+              <a href="https://www.janda-hotel.com.tw/" target="_blank" rel="noopener">janda-hotel.com.tw ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Day 1 ===== -->
+  <section class="day-section" id="day1">
+    <div class="section-header">
+      <div class="day-tag">DAY 1</div>
+      <h2 class="section-title">抵達 + 海線夕陽</h2>
+      <p class="section-subtitle">2 月 20 日（五）</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">下午</div>
+        <div class="timeline-card">
+          <h3>出發前往台中</h3>
+          <p>國道 1 號或 3 號 → 國道 4 號 → 台 61 線</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">16:30</div>
+        <div class="timeline-card">
+          <h3>高美濕地</h3>
+          <p>目標 16:30 抵達，週五下班車潮要預留時間。小朋友可在木棧道觀察招潮蟹。</p>
+          <div class="callout">
+            <div class="callout-title">⚠️ 高美濕地注意事項</div>
+            <ul>
+              <li>木棧道開放時間依潮汐而定（漲潮前 1.5 小時封閉、漲潮後 1.5 小時重新開放）</li>
+              <li><strong>出發前務必查詢木棧道開放時間</strong>：<a href="https://gaomei.com.tw/gaomei-wetland/opening-hours/" target="_blank" rel="noopener">gaomei.com.tw ↗</a></li>
+              <li>也可電洽確認：<a href="tel:04-2656-6494">04-2656-6494</a>（海岸資源漁業發展所）</li>
+              <li>冬季風大，帶外套；木棧道濕滑，小朋友注意安全</li>
+              <li>停車場在濕地旁，免費</li>
+            </ul>
+          </div>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">官網</div>
+                <a href="https://gaomei.com.tw/" target="_blank" rel="noopener">gaomei.com.tw ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">導航</div>
+                <a href="https://maps.google.com/?q=高美濕地" target="_blank" rel="noopener">開啟 Google Maps ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">遊客服務中心</div>
+                <a href="tel:04-2611-1566">04-2611-1566</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">17:50</div>
+        <div class="timeline-card">
+          <h3>日落時分</h3>
+          <p>高美濕地最美的一刻。帶小朋友在木棧道上欣賞夕陽。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">18:00</div>
+        <div class="timeline-card">
+          <h3>飯店 Check-in</h3>
+          <p>高美濕地到飯店車程約 15 分鐘。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">18:30</div>
+        <div class="timeline-card">
+          <h3>晚餐</h3>
+          <p>飯店內用或三井 Outlet 用餐。到得晚就飯店吃；三井離飯店 3 分鐘車程。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">20:00</div>
+        <div class="timeline-card">
+          <h3>回飯店休息</h3>
+          <p>早點休息，明天行程滿滿。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Day 2 ===== -->
+  <section class="day-section" id="day2">
+    <div class="section-header">
+      <div class="day-tag">DAY 2</div>
+      <h2 class="section-title">海洋館 + 漁港 + 單車 + 夜市</h2>
+      <p class="section-subtitle">2 月 21 日（六）</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">09:00</div>
+        <div class="timeline-card">
+          <h3>飯店早餐</h3>
+          <p>吃飽再出發，今天會玩一整天！</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">10:00</div>
+        <div class="timeline-card">
+          <h3>台中海洋館</h3>
+          <p>開館即入場，慢慢逛到下午。亮點：千噸巨缸（全台第二大）、水母光影牆、屋頂觀景平台。</p>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">地址</div>
+                <a href="https://maps.google.com/?q=台中市清水區海洋路168號" target="_blank" rel="noopener">台中市清水區海洋路 168 號 ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">營業時間</div>
+                10:00 ～ 18:00（最後入館 17:00）
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">休館日</div>
+                週二（2/21 週六 OK）
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">門票</div>
+                NT$250 ～ 500（<a href="https://tcaqua.fonticket.com/" target="_blank" rel="noopener">線上購票 ↗</a>）
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">官網</div>
+                <a href="https://tcaqua.com.tw/" target="_blank" rel="noopener">tcaqua.com.tw ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">備註</div>
+                推車可入館；館內冷氣強帶薄外套；館內禁帶外食（4F 餐廳、5F 咖啡廳）
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">14:30</div>
+        <div class="timeline-card">
+          <h3>梧棲漁港午餐</h3>
+          <p>海鮮餐廳，離海洋館車程 5 分鐘。鮮魚區、餐飲區、漁港超市，海鮮現撈現吃。</p>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">地址</div>
+                <a href="https://maps.google.com/?q=台中市清水區北堤路30號" target="_blank" rel="noopener">台中市清水區北堤路 30 號 ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">營業時間</div>
+                09:00 ～ 19:00
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">電話</div>
+                <a href="tel:04-2657-1586">04-2657-1586</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">15:30</div>
+        <div class="timeline-card">
+          <h3>頂魚寮公園</h3>
+          <p>免費親子公園，鯨魚溜滑梯、草叢迷宮、3D 彩繪、咚咚鼓、大陀螺。小朋友放電好去處！</p>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">地址</div>
+                <a href="https://maps.google.com/?q=台中市梧棲區八德東路頂魚寮公園" target="_blank" rel="noopener">台中市梧棲區八德東路 ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">開放時間</div>
+                24 小時開放、免門票
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">建議停留</div>
+                30 分鐘 ～ 1 小時
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">16:00</div>
+        <div class="timeline-card">
+          <h3>濱海自行車道騎車</h3>
+          <p>漁港周邊騎一小段，沿途有海景和風車。附近有 YouBike 2.0 站點可租車。</p>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">全長</div>
+                69.2 km（不用騎全程！）
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">YouBike 站點</div>
+                台中海洋生態館、漁港文興路口
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">備註</div>
+                小朋友坐親子座椅或自行帶兒童車，注意安全帽
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">17:00</div>
+        <div class="timeline-card">
+          <h3>回飯店休息、梳洗</h3>
+          <p>騎完車回飯店沖個澡，準備出發逛夜市。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">18:00</div>
+        <div class="timeline-card">
+          <h3>梧棲中港觀光夜市</h3>
+          <p>海線最大夜市，200+ 攤位，有吃有玩！免費停車場。夜市離飯店很近。</p>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">地址</div>
+                <a href="https://maps.google.com/?q=台中市梧棲區文昌路280號" target="_blank" rel="noopener">台中市梧棲區文昌路 280 號 ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">營業時間</div>
+                每週二、四、五、六 16:30 ～ 23:30
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">電話</div>
+                <a href="tel:0971-212-127">0971-212-127</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">20:00</div>
+        <div class="timeline-card">
+          <h3>回飯店</h3>
+          <p>帶小朋友回飯店好好休息。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Day 3 ===== -->
+  <section class="day-section" id="day3">
+    <div class="section-header">
+      <div class="day-tag">DAY 3</div>
+      <h2 class="section-title">台中港 + 回程</h2>
+      <p class="section-subtitle">2 月 22 日（日）</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">08:30</div>
+        <div class="timeline-card">
+          <h3>飯店早餐 + 收行李</h3>
+          <p>最後一天，吃完早餐先整理行李。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">09:30</div>
+        <div class="timeline-card">
+          <h3>梧樂新創園區 We Love Park</h3>
+          <p>千坪複合式園區：特色餐飲、親子手作課、電動卡丁車試乘、藝文展演。</p>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">地址</div>
+                <a href="https://maps.google.com/?q=台中市梧棲區大仁路一段7號" target="_blank" rel="noopener">台中市梧棲區大仁路一段 7 號 ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">營業時間</div>
+                週一至六 09:00-19:00、週日 10:00-19:00
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">電話</div>
+                <a href="tel:04-2656-8970">04-2656-8970</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">官網</div>
+                <a href="https://www.hiperland.com.tw/" target="_blank" rel="noopener">hiperland.com.tw ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">10:30</div>
+        <div class="timeline-card">
+          <h3>MITSUI OUTLET PARK 台中港</h3>
+          <p>開車 5 分鐘即到！60 公尺高海景摩天輪，可眺望台中港（約 NT$150/人）。離飯店步行可達。</p>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">地址</div>
+                <a href="https://maps.google.com/?q=台中市梧棲區臺灣大道十段168號" target="_blank" rel="noopener">台中市梧棲區臺灣大道十段 168 號 ↗</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">營業時間</div>
+                平日 11:00-21:30 / 假日 10:30-21:30
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">電話</div>
+                <a href="tel:04-2521-8999">04-2521-8999</a>
+              </div>
+              <div class="spot-chip">
+                <div class="spot-chip-label">官網</div>
+                <a href="https://www.mitsui-shopping-park.com.tw/mop/taichungport/tw/index.html" target="_blank" rel="noopener">mitsui-shopping-park.com.tw ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">12:00</div>
+        <div class="timeline-card">
+          <h3>飯店 Check-out</h3>
+          <p>12:00 前退房。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">12:30</div>
+        <div class="timeline-card">
+          <h3>啟程回家</h3>
+          <p>收拾好行囊，帶著滿滿的回憶回家。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">選配</div>
+        <div class="timeline-card">
+          <h3>大甲鎮瀾宮</h3>
+          <p>回程順路，台灣媽祖信仰重鎮。想拜拜求平安可以順道去。</p>
+          <div class="spot-details">
+            <button class="spot-toggle" onclick="toggleSpot(this)">
+              景點資訊 <span class="arrow">▼</span>
+            </button>
+            <div class="spot-info">
+              <div class="spot-chip">
+                <div class="spot-chip-label">導航</div>
+                <a href="https://maps.google.com/?q=大甲鎮瀾宮" target="_blank" rel="noopener">開啟 Google Maps ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Practical Info ===== -->
+  <section class="day-section" id="info" style="background: var(--white);">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <h2 class="section-title">實用資訊</h2>
+      <p class="section-subtitle">出發前看一眼，安心上路</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="info-card-icon">🚗</span>
+        <h3>交通</h3>
+        <ul>
+          <li>自駕為主，飯店有停車場</li>
+          <li>海線景點彼此車程 5-15 分鐘</li>
+          <li>高美濕地、海洋館、梧棲漁港、三井、梧樂園區都在附近</li>
+          <li>夜市離飯店車程約 5 分鐘</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <span class="info-card-icon">👶</span>
+        <h3>親子提醒</h3>
+        <ul>
+          <li>高美濕地：帶拖鞋、毛巾（玩水玩沙）、防風外套</li>
+          <li>海洋館：推車可入館；館內冷氣強，帶薄外套</li>
+          <li>騎車：小朋友坐親子座椅或自行帶兒童車，注意安全帽</li>
+          <li>夜市：人多注意小朋友，帶濕紙巾</li>
+          <li>隨身帶水壺、小點心（4 歲可能隨時喊餓）</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <span class="info-card-icon">📞</span>
+        <h3>緊急聯絡</h3>
+        <ul>
+          <li>飯店：<a href="tel:04-2657-7001">04-2657-7001</a></li>
+          <li>高美濕地遊客中心：<a href="tel:04-2611-1566">04-2611-1566</a></li>
+          <li>台中海洋館：<a href="mailto:tca.service080@gmail.com">tca.service080@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Packing List ===== -->
+  <section class="packing-section" id="packing">
+    <div class="section-header">
+      <span class="section-icon">🧳</span>
+      <h2 class="section-title">行李備忘清單</h2>
+      <p class="section-subtitle">勾選打包進度，下次開啟還會記得</p>
+    </div>
+    <div class="packing-progress">
+      <span class="progress-text" id="progress-text">已打包 0 / 0 項</span>
+      <div class="progress-bar-outer">
+        <div class="progress-bar-inner" id="progress-bar"></div>
+      </div>
+    </div>
+    <div class="packing-grid">
+      <div class="packing-card">
+        <h3><span>📄</span> 證件 / 財務</h3>
+        <div class="check-item">
+          <input type="checkbox" id="pack-1" data-key="pack-1">
+          <label for="pack-1">身分證 / 健保卡（大人×2、小孩×2）</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-2" data-key="pack-2">
+          <label for="pack-2">駕照</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-3" data-key="pack-3">
+          <label for="pack-3">信用卡 / 現金</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-4" data-key="pack-4">
+          <label for="pack-4">手機 + 充電器 + 行動電源</label>
+        </div>
+      </div>
+
+      <div class="packing-card">
+        <h3><span>👕</span> 衣物</h3>
+        <div class="check-item">
+          <input type="checkbox" id="pack-5" data-key="pack-5">
+          <label for="pack-5">換洗衣物（2 天份 × 4 人）</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-6" data-key="pack-6">
+          <label for="pack-6">防風外套（高美濕地海風大）</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-7" data-key="pack-7">
+          <label for="pack-7">薄外套（海洋館冷氣強）</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-8" data-key="pack-8">
+          <label for="pack-8">拖鞋（高美濕地玩水用）</label>
+        </div>
+      </div>
+
+      <div class="packing-card">
+        <h3><span>🍼</span> 小朋友用品</h3>
+        <div class="check-item">
+          <input type="checkbox" id="pack-9" data-key="pack-9">
+          <label for="pack-9">水壺 × 2</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-10" data-key="pack-10">
+          <label for="pack-10">小點心 / 零食</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-11" data-key="pack-11">
+          <label for="pack-11">濕紙巾 / 面紙</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-12" data-key="pack-12">
+          <label for="pack-12">備用口罩</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-13" data-key="pack-13">
+          <label for="pack-13">小毛巾</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-14" data-key="pack-14">
+          <label for="pack-14">推車（視需要）</label>
+        </div>
+      </div>
+
+      <div class="packing-card">
+        <h3><span>🏖️</span> 高美濕地專用</h3>
+        <div class="check-item">
+          <input type="checkbox" id="pack-15" data-key="pack-15">
+          <label for="pack-15">毛巾（擦腳用）</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-16" data-key="pack-16">
+          <label for="pack-16">塑膠袋（裝濕衣物/鞋子）</label>
+        </div>
+      </div>
+
+      <div class="packing-card">
+        <h3><span>🎒</span> 其他</h3>
+        <div class="check-item">
+          <input type="checkbox" id="pack-17" data-key="pack-17">
+          <label for="pack-17">防曬乳</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-18" data-key="pack-18">
+          <label for="pack-18">雨具（2 月偶有雨）</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-19" data-key="pack-19">
+          <label for="pack-19">相機 / 自拍棒</label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="pack-20" data-key="pack-20">
+          <label for="pack-20">常備藥品</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <div class="footer-wave"></div>
+  <footer class="footer">
+    <p>台中家庭旅行 2026 · 三天兩夜海線慢旅行</p>
+    <p style="margin-top: 8px; font-size: 0.75rem;">最後更新：2026-02-19</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    // ===== Sticky Nav on Scroll =====
+    const nav = document.getElementById('nav');
+    const hero = document.querySelector('.hero');
+    let lastScroll = 0;
+
+    function handleNav() {
+      const scrollY = window.scrollY;
+      const heroBottom = hero.offsetHeight - 100;
+
+      if (scrollY > heroBottom) {
+        nav.classList.add('visible');
+      } else {
+        nav.classList.remove('visible');
+      }
+
+      // Highlight active section
+      const sections = ['hotel', 'day1', 'day2', 'day3', 'info', 'packing'];
+      const links = document.querySelectorAll('.nav-link');
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && scrollY >= section.offsetTop - 120) {
+          links.forEach(l => l.classList.remove('active'));
+          links[i].classList.add('active');
+          break;
+        }
+      }
+
+      lastScroll = scrollY;
+    }
+
+    window.addEventListener('scroll', handleNav, { passive: true });
+
+    // ===== Scroll Reveal =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.timeline-item, .info-card, .packing-card').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ===== Toggle Spot Info =====
+    function toggleSpot(btn) {
+      const info = btn.nextElementSibling;
+      btn.classList.toggle('open');
+      info.classList.toggle('open');
+    }
+
+    // ===== Packing List with localStorage =====
+    const STORAGE_KEY = 'taichung-trip-packing';
+
+    function loadPackingState() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+          if (saved[cb.dataset.key]) {
+            cb.checked = true;
+          }
+        });
+      } catch (e) {
+        // Ignore parse errors
+      }
+      updateProgress();
+    }
+
+    function savePackingState() {
+      const state = {};
+      document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+        if (cb.checked) {
+          state[cb.dataset.key] = true;
+        }
+      });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const all = document.querySelectorAll('.check-item input[type="checkbox"]');
+      const checked = document.querySelectorAll('.check-item input[type="checkbox"]:checked');
+      const total = all.length;
+      const done = checked.length;
+      const pct = total > 0 ? (done / total * 100) : 0;
+
+      document.getElementById('progress-text').textContent = `已打包 ${done} / ${total} 項`;
+      document.getElementById('progress-bar').style.width = pct + '%';
+    }
+
+    document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', savePackingState);
+    });
+
+    // Initialize
+    loadPackingState();
+  </script>
+</body>
+</html>
