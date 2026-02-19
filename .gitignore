@@ -1,10 +1,23 @@
 .DS_Store
-.claude/
+.claude/*
+!.claude/
+!.claude/setup.sh
 *.swp
 *.swo
 *~
+
+# Plaintext secrets (never commit)
 .env
+.env.missing
+.env.local
+.env.*.local
+
+# age private key (never commit)
 age-key.txt
+
+# Encrypted env (safe to commit)
+!.env.age
+!.env.*.age
 
 # Local Netlify folder
 .netlify
