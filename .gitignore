@@ -5,3 +5,6 @@
 *~
 .env
 age-key.txt
+
+# Local Netlify folder
+.netlify
