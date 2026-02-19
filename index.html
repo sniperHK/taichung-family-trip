@@ -1073,6 +1073,339 @@
       }
     }
 
+    /* ========== Trip Overview ========== */
+    .overview-section {
+      background: var(--white);
+      padding: 80px 20px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .overview-card {
+      background: var(--soft-cream);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      border: 1px solid rgba(11, 29, 58, 0.04);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .overview-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .overview-day-tag {
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--sunset-coral);
+      margin-bottom: 4px;
+    }
+
+    .overview-date {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .overview-theme {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    .overview-stops {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .overview-stops li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding: 3px 0;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .overview-stops li::before {
+      content: attr(data-time);
+      position: absolute;
+      left: 0;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--ocean-blue);
+      font-family: 'DM Serif Display', serif;
+    }
+
+    @media (max-width: 640px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========== Driving Distance Chip ========== */
+    .drive-chip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px 0;
+      margin: -8px 0;
+      position: relative;
+    }
+
+    .drive-chip-inner {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(21, 101, 192, 0.06);
+      color: var(--ocean-blue);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 12px;
+      border-radius: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ========== Countdown ========== */
+    .countdown-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      padding: 10px 24px;
+      border-radius: 30px;
+      margin-top: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .countdown-unit {
+      text-align: center;
+    }
+
+    .countdown-value {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .countdown-label {
+      font-size: 0.65rem;
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+
+    .countdown-sep {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    .trip-active-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(77, 182, 172, 0.2);
+      color: var(--white);
+      padding: 10px 24px;
+      border-radius: 30px;
+      margin-top: 20px;
+      border: 1px solid rgba(77, 182, 172, 0.3);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .trip-active-badge .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--seafoam);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    .trip-ended-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 10px 24px;
+      border-radius: 30px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Now-indicator highlight on timeline */
+    .timeline-item.now-active > .timeline-card {
+      border-left: 4px solid var(--seafoam);
+      box-shadow: var(--shadow-md), 0 0 0 2px rgba(77, 182, 172, 0.15);
+    }
+
+    .timeline-item.now-active > .timeline-dot {
+      background: var(--seafoam);
+      box-shadow: 0 0 0 2px var(--seafoam), 0 0 8px rgba(77, 182, 172, 0.5);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .now-label {
+      display: inline-block;
+      background: var(--seafoam);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 10px;
+      margin-left: 8px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ========== Cost Summary ========== */
+    .cost-summary {
+      background: linear-gradient(135deg, rgba(244, 228, 193, 0.4), rgba(255, 248, 240, 0.6));
+      border: 1px solid rgba(244, 228, 193, 0.6);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-top: 16px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cost-summary-title {
+      font-family: 'Noto Serif TC', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--deep-navy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cost-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .cost-row.total {
+      border-top: 1px solid rgba(11, 29, 58, 0.1);
+      margin-top: 6px;
+      padding-top: 10px;
+      font-weight: 700;
+      color: var(--deep-navy);
+      font-size: 0.95rem;
+    }
+
+    .cost-amount {
+      font-weight: 600;
+      color: var(--deep-navy);
+    }
+
+    .cost-row.total .cost-amount {
+      color: var(--sunset-coral);
+    }
+
+    .cost-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ========== Weather Chip ========== */
+    .weather-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, rgba(21, 101, 192, 0.06), rgba(77, 182, 172, 0.06));
+      border: 1px solid rgba(21, 101, 192, 0.1);
+      border-radius: 30px;
+      padding: 8px 20px;
+      margin-bottom: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .weather-chip .weather-icon {
+      font-size: 1.2rem;
+    }
+
+    .weather-chip .weather-temp {
+      font-weight: 700;
+      color: var(--deep-navy);
+    }
+
+    /* ========== Back to Top ========== */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--deep-navy);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .back-to-top:hover {
+      background: var(--ocean-blue);
+      transform: translateY(-2px);
+    }
+
+    .back-to-top svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     /* ========== Print ========== */
     @media print {
 
@@ -1104,6 +1437,7 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#hotel" class="nav-link">住宿</a>
+      <a href="#overview" class="nav-link">總覽</a>
       <a href="#day1" class="nav-link">Day 1</a>
       <a href="#day2" class="nav-link">Day 2</a>
       <a href="#day3" class="nav-link">Day 3</a>
@@ -1121,6 +1455,7 @@
       <h1>台中家庭旅行</h1>
       <p class="hero-subtitle">2026 / 2 / 20 — 2 / 22</p>
       <p class="hero-info">三天兩夜 · 2 大 2 小 · 海線慢旅行</p>
+      <div id="countdown-container"></div>
     </div>
     <div class="scroll-hint">
       <span>SCROLL</span>
@@ -1187,12 +1522,61 @@
     </div>
   </section>
 
+  <!-- ===== Trip Overview ===== -->
+  <section class="overview-section" id="overview">
+    <div class="section-header">
+      <span class="section-icon">🗓️</span>
+      <h2 class="section-title">三天行程總覽</h2>
+      <p class="section-subtitle">點擊任一天跳到詳細時間軸</p>
+    </div>
+    <div class="overview-grid">
+      <a href="#day1" class="overview-card">
+        <div class="overview-day-tag">DAY 1</div>
+        <div class="overview-date">2/20（五）</div>
+        <div class="overview-theme">抵達 + 海線夕陽</div>
+        <ul class="overview-stops">
+          <li data-time="午">出發前往台中</li>
+          <li data-time="16:30">高美濕地賞夕陽</li>
+          <li data-time="18:00">飯店 Check-in</li>
+          <li data-time="18:30">晚餐</li>
+        </ul>
+      </a>
+      <a href="#day2" class="overview-card">
+        <div class="overview-day-tag">DAY 2</div>
+        <div class="overview-date">2/21（六）</div>
+        <div class="overview-theme">海洋館 + 漁港 + 夜市</div>
+        <ul class="overview-stops">
+          <li data-time="10:00">台中海洋館</li>
+          <li data-time="14:30">梧棲漁港午餐</li>
+          <li data-time="15:30">頂魚寮公園</li>
+          <li data-time="16:00">濱海自行車道</li>
+          <li data-time="18:00">中港觀光夜市</li>
+        </ul>
+      </a>
+      <a href="#day3" class="overview-card">
+        <div class="overview-day-tag">DAY 3</div>
+        <div class="overview-date">2/22（日）</div>
+        <div class="overview-theme">科博館 + 太陽餅 DIY</div>
+        <ul class="overview-stops">
+          <li data-time="09:30">Check-out</li>
+          <li data-time="10:30">自然科學博物館</li>
+          <li data-time="13:00">太陽餅 DIY</li>
+          <li data-time="14:30">啟程回家</li>
+        </ul>
+      </a>
+    </div>
+  </section>
+
   <!-- ===== Day 1 ===== -->
   <section class="day-section" id="day1">
     <div class="section-header">
       <div class="day-tag">DAY 1</div>
       <h2 class="section-title">抵達 + 海線夕陽</h2>
       <p class="section-subtitle">2 月 20 日（五）</p>
+      <div class="weather-chip">
+        <span class="weather-icon">🌤️</span>
+        <span><span class="weather-temp">17～26°C</span> · 降雨機率低 · 海邊風大帶防風外套</span>
+      </div>
     </div>
     <div class="timeline">
       <div class="timeline-item">
@@ -1244,6 +1628,8 @@
         </div>
       </div>
 
+      <div class="drive-chip"><span class="drive-chip-inner">📍 停留約 1.5 小時</span></div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">17:50</div>
@@ -1253,6 +1639,8 @@
         </div>
       </div>
 
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 7km · 約 15 分鐘</span></div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">18:00</div>
@@ -1261,6 +1649,8 @@
           <p>高美濕地到飯店車程約 15 分鐘。</p>
         </div>
       </div>
+
+      <div class="drive-chip"><span class="drive-chip-inner">🏨 飯店內 或 🚗 3 分鐘至三井</span></div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -1280,6 +1670,13 @@
         </div>
       </div>
     </div>
+    <div class="cost-summary">
+      <div class="cost-summary-title">💰 Day 1 預估花費</div>
+      <div class="cost-row"><span>高美濕地停車</span><span class="cost-amount">~NT$50</span></div>
+      <div class="cost-row"><span>晚餐（4 人）</span><span class="cost-amount">~NT$800</span></div>
+      <div class="cost-row total"><span>小計</span><span class="cost-amount">~NT$850</span></div>
+      <div class="cost-note">* 飯店內用另計；金額為估算供參考</div>
+    </div>
   </section>
 
   <!-- ===== Day 2 ===== -->
@@ -1288,6 +1685,10 @@
       <div class="day-tag">DAY 2</div>
       <h2 class="section-title">海洋館 + 漁港 + 單車 + 夜市</h2>
       <p class="section-subtitle">2 月 21 日（六）</p>
+      <div class="weather-chip">
+        <span class="weather-icon">☀️</span>
+        <span><span class="weather-temp">17～27°C</span> · 晴朗 · 注意防曬補水</span>
+      </div>
     </div>
     <div class="timeline">
       <div class="timeline-item">
@@ -1298,6 +1699,8 @@
           <p>吃飽再出發，今天會玩一整天！</p>
         </div>
       </div>
+
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 4km · 約 10 分鐘至海洋館</span></div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -1343,6 +1746,8 @@
         </div>
       </div>
 
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 1km · 約 3 分鐘至漁港</span></div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">14:30</div>
@@ -1370,6 +1775,8 @@
           </div>
         </div>
       </div>
+
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 2.5km · 約 5 分鐘</span></div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -1399,6 +1806,8 @@
         </div>
       </div>
 
+      <div class="drive-chip"><span class="drive-chip-inner">📍 就在附近</span></div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">16:00</div>
@@ -1427,6 +1836,8 @@
         </div>
       </div>
 
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 2km · 約 5 分鐘回飯店</span></div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">17:00</div>
@@ -1435,6 +1846,8 @@
           <p>騎完車回飯店沖個澡，準備出發逛夜市。</p>
         </div>
       </div>
+
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 2km · 約 5 分鐘至夜市</span></div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -1473,6 +1886,16 @@
         </div>
       </div>
     </div>
+    <div class="cost-summary">
+      <div class="cost-summary-title">💰 Day 2 預估花費</div>
+      <div class="cost-row"><span>海洋館門票（已購）</span><span class="cost-amount">NT$1,300 ✓</span></div>
+      <div class="cost-row"><span>海洋館/漁港停車</span><span class="cost-amount">~NT$100</span></div>
+      <div class="cost-row"><span>漁港午餐（4 人）</span><span class="cost-amount">~NT$800</span></div>
+      <div class="cost-row"><span>YouBike 租車</span><span class="cost-amount">~NT$100</span></div>
+      <div class="cost-row"><span>夜市晚餐 + 小吃</span><span class="cost-amount">~NT$800</span></div>
+      <div class="cost-row total"><span>小計</span><span class="cost-amount">~NT$3,100</span></div>
+      <div class="cost-note">* 海洋館門票已預購付款；金額為估算供參考</div>
+    </div>
   </section>
 
   <!-- ===== Day 3 ===== -->
@@ -1481,6 +1904,10 @@
       <div class="day-tag">DAY 3</div>
       <h2 class="section-title">科博館 + 太陽餅 DIY + 回程</h2>
       <p class="section-subtitle">2 月 22 日（日）</p>
+      <div class="weather-chip">
+        <span class="weather-icon">🌤️</span>
+        <span><span class="weather-temp">18～27°C</span> · 多雲到晴 · 適合市區走跳</span>
+      </div>
     </div>
     <div class="timeline">
       <div class="timeline-item">
@@ -1500,6 +1927,8 @@
           <p>行李先上車，不用再折返。</p>
         </div>
       </div>
+
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 沿台灣大道 · 約 25 分鐘</span></div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -1550,6 +1979,8 @@
         </div>
       </div>
 
+      <div class="drive-chip"><span class="drive-chip-inner">📍 停留約 2 小時</span></div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">12:30</div>
@@ -1558,6 +1989,8 @@
           <p>館內 B1 有餐廳，或到周邊覓食。</p>
         </div>
       </div>
+
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 約 10 分鐘至太陽餅博物館</span></div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -1596,6 +2029,8 @@
         </div>
       </div>
 
+      <div class="drive-chip"><span class="drive-chip-inner">🚗 約 2.5～3.5 小時回台北</span></div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">14:30</div>
@@ -1624,6 +2059,16 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="cost-summary">
+      <div class="cost-summary-title">💰 Day 3 預估花費</div>
+      <div class="cost-row"><span>科博館門票（大人 ×1 + 兒童 ×1）</span><span class="cost-amount">~NT$180</span></div>
+      <div class="cost-row"><span>太空劇場（選配）</span><span class="cost-amount">~NT$300</span></div>
+      <div class="cost-row"><span>太陽餅 DIY（2 人份）</span><span class="cost-amount">NT$500</span></div>
+      <div class="cost-row"><span>午餐（4 人）</span><span class="cost-amount">~NT$600</span></div>
+      <div class="cost-row"><span>國道過路費</span><span class="cost-amount">~NT$300</span></div>
+      <div class="cost-row total"><span>小計</span><span class="cost-amount">~NT$1,880</span></div>
+      <div class="cost-note">* 6 歲以下科博館免費、4 歲免太空劇場票；金額為估算供參考</div>
     </div>
   </section>
 
@@ -1897,6 +2342,11 @@
     </div>
   </section>
 
+  <!-- ===== Back to Top ===== -->
+  <button class="back-to-top" id="back-to-top" title="回到頂部">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
   <!-- ===== Footer ===== -->
   <div class="footer-wave"></div>
   <footer class="footer">
@@ -1909,6 +2359,7 @@
     // ===== Sticky Nav on Scroll =====
     const nav = document.getElementById('nav');
     const hero = document.querySelector('.hero');
+    const backToTopBtn = document.getElementById('back-to-top');
     let lastScroll = 0;
 
     function handleNav() {
@@ -1921,8 +2372,15 @@
         nav.classList.remove('visible');
       }
 
+      // Back to top button visibility
+      if (scrollY > 600) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+
       // Highlight active section
-      const sections = ['hotel', 'day1', 'day2', 'day3', 'transport', 'info', 'packing'];
+      const sections = ['hotel', 'overview', 'day1', 'day2', 'day3', 'transport', 'info', 'packing'];
       const links = document.querySelectorAll('.nav-link');
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -1938,6 +2396,11 @@
     }
 
     window.addEventListener('scroll', handleNav, { passive: true });
+
+    // ===== Back to Top =====
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     // ===== Scroll Reveal =====
     const observer = new IntersectionObserver((entries) => {
@@ -2040,6 +2503,109 @@
 
       window.open(url, '_blank');
     });
+
+    // ===== Countdown / Trip Status =====
+    const TRIP_START = new Date('2026-02-20T00:00:00+08:00');
+    const TRIP_END = new Date('2026-02-22T23:59:59+08:00');
+
+    // Timeline schedule for now-indicator (month is 0-indexed)
+    const SCHEDULE = [
+      { day: new Date('2026-02-20'), start: 13, end: 16.5, section: 'day1', index: 0 },  // 出發
+      { day: new Date('2026-02-20'), start: 16.5, end: 17.8, section: 'day1', index: 1 }, // 高美濕地
+      { day: new Date('2026-02-20'), start: 17.8, end: 18, section: 'day1', index: 2 },   // 日落
+      { day: new Date('2026-02-20'), start: 18, end: 18.5, section: 'day1', index: 4 },   // Check-in
+      { day: new Date('2026-02-20'), start: 18.5, end: 20, section: 'day1', index: 5 },   // 晚餐
+      { day: new Date('2026-02-20'), start: 20, end: 24, section: 'day1', index: 6 },     // 回飯店
+      { day: new Date('2026-02-21'), start: 9, end: 10, section: 'day2', index: 0 },      // 早餐
+      { day: new Date('2026-02-21'), start: 10, end: 14.5, section: 'day2', index: 2 },   // 海洋館
+      { day: new Date('2026-02-21'), start: 14.5, end: 15.5, section: 'day2', index: 4 }, // 漁港
+      { day: new Date('2026-02-21'), start: 15.5, end: 16, section: 'day2', index: 6 },   // 頂魚寮
+      { day: new Date('2026-02-21'), start: 16, end: 17, section: 'day2', index: 8 },     // 自行車
+      { day: new Date('2026-02-21'), start: 17, end: 18, section: 'day2', index: 10 },    // 回飯店
+      { day: new Date('2026-02-21'), start: 18, end: 20, section: 'day2', index: 12 },    // 夜市
+      { day: new Date('2026-02-21'), start: 20, end: 24, section: 'day2', index: 13 },    // 回飯店
+      { day: new Date('2026-02-22'), start: 8.5, end: 9.5, section: 'day3', index: 0 },   // 早餐
+      { day: new Date('2026-02-22'), start: 9.5, end: 10, section: 'day3', index: 1 },    // Check-out
+      { day: new Date('2026-02-22'), start: 10, end: 10.5, section: 'day3', index: 3 },   // 前往市區
+      { day: new Date('2026-02-22'), start: 10.5, end: 12.5, section: 'day3', index: 4 }, // 科博館
+      { day: new Date('2026-02-22'), start: 12.5, end: 13, section: 'day3', index: 6 },   // 午餐
+      { day: new Date('2026-02-22'), start: 13, end: 14.5, section: 'day3', index: 8 },   // 太陽餅
+      { day: new Date('2026-02-22'), start: 14.5, end: 18, section: 'day3', index: 10 },  // 回家
+    ];
+
+    function updateCountdown() {
+      const now = new Date();
+      const container = document.getElementById('countdown-container');
+
+      if (now < TRIP_START) {
+        const diff = TRIP_START - now;
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const mins = Math.floor((diff % 3600000) / 60000);
+
+        container.innerHTML = `
+          <div class="countdown-bar">
+            <div class="countdown-unit"><div class="countdown-value">${days}</div><div class="countdown-label">天</div></div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit"><div class="countdown-value">${hours}</div><div class="countdown-label">時</div></div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit"><div class="countdown-value">${mins}</div><div class="countdown-label">分</div></div>
+          </div>`;
+      } else if (now <= TRIP_END) {
+        const dayNum = now.getDate() - 19; // Feb 20=Day1, 21=Day2, 22=Day3
+        container.innerHTML = `<div class="trip-active-badge"><span class="pulse"></span> 旅行中 — Day ${dayNum}</div>`;
+        highlightNow(now);
+      } else {
+        container.innerHTML = `<div class="trip-ended-badge">✨ 美好旅程已結束</div>`;
+      }
+    }
+
+    function highlightNow(now) {
+      // Clear previous highlights
+      document.querySelectorAll('.timeline-item.now-active').forEach(el => el.classList.remove('now-active'));
+      document.querySelectorAll('.now-label').forEach(el => el.remove());
+
+      const hour = now.getHours() + now.getMinutes() / 60;
+      const todayStr = now.toISOString().slice(0, 10);
+
+      for (const slot of SCHEDULE) {
+        const slotDate = slot.day.toISOString().slice(0, 10);
+        if (slotDate === todayStr && hour >= slot.start && hour < slot.end) {
+          const section = document.getElementById(slot.section);
+          if (!section) break;
+          const items = section.querySelectorAll('.timeline-item');
+          if (items[slot.index]) {
+            items[slot.index].classList.add('now-active');
+            const timeEl = items[slot.index].querySelector('.timeline-time');
+            if (timeEl && !timeEl.querySelector('.now-label')) {
+              timeEl.insertAdjacentHTML('beforeend', '<span class="now-label">NOW</span>');
+            }
+          }
+          break;
+        }
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    // ===== Auto-expand important spot info =====
+    (function autoExpandImportant() {
+      // Auto-expand 高美濕地 (Day1, 2nd timeline item) and 海洋館 (Day2, 2nd timeline item)
+      const day1Items = document.querySelectorAll('#day1 .spot-toggle');
+      const day2Items = document.querySelectorAll('#day2 .spot-toggle');
+
+      // 高美濕地 is the first spot-toggle in Day 1
+      if (day1Items[0]) {
+        day1Items[0].classList.add('open');
+        day1Items[0].nextElementSibling.classList.add('open');
+      }
+      // 海洋館 is the first spot-toggle in Day 2
+      if (day2Items[0]) {
+        day2Items[0].classList.add('open');
+        day2Items[0].nextElementSibling.classList.add('open');
+      }
+    })();
 
     // Initialize
     loadPackingState();
