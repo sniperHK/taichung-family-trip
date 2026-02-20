@@ -496,6 +496,31 @@
       margin-bottom: 8px;
     }
 
+    .timeline-card h3 a.spot-link {
+      color: var(--deep-navy);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .timeline-card h3 a.spot-link::after {
+      content: '攻略 →';
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--ocean-blue);
+      background: rgba(21, 101, 192, 0.08);
+      padding: 2px 8px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+    .timeline-card h3 a.spot-link:hover {
+      color: var(--ocean-blue);
+    }
+    .timeline-card h3 a.spot-link:hover::after {
+      background: rgba(21, 101, 192, 0.15);
+    }
+
     .timeline-card p {
       font-size: 0.9rem;
       color: var(--text-muted);
@@ -1593,7 +1618,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-time">16:30</div>
         <div class="timeline-card">
-          <h3>高美濕地</h3>
+          <h3><a href="spots/gaomei.html" class="spot-link">高美濕地</a></h3>
           <p>目標 16:30 抵達，週五下班車潮要預留時間。小朋友可在木棧道觀察招潮蟹。</p>
           <div class="callout">
             <div class="callout-title">⚠️ 高美濕地注意事項</div>
@@ -1707,7 +1732,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-time">10:00</div>
         <div class="timeline-card">
-          <h3>台中海洋館</h3>
+          <h3><a href="spots/aquarium.html" class="spot-link">台中海洋館</a></h3>
           <p>已購票（場次 2），10:00 入場。亮點：千噸巨缸（全台第二大）、水母光影牆、屋頂觀景平台。</p>
           <div class="spot-details">
             <button class="spot-toggle" onclick="toggleSpot(this)">
@@ -1753,7 +1778,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-time">14:30</div>
         <div class="timeline-card">
-          <h3>梧棲漁港午晚餐</h3>
+          <h3><a href="spots/wuqi-harbor.html" class="spot-link">梧棲漁港午晚餐</a></h3>
           <p>海鮮餐廳，離海洋館車程 5 分鐘。鮮魚區、餐飲區、漁港超市，海鮮現撈現吃。</p>
           <div class="spot-details">
             <button class="spot-toggle" onclick="toggleSpot(this)">
@@ -1783,7 +1808,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-time">15:30</div>
         <div class="timeline-card">
-          <h3>頂魚寮公園</h3>
+          <h3><a href="spots/dingyuliao.html" class="spot-link">頂魚寮公園</a></h3>
           <p>免費親子公園，鯨魚溜滑梯、草叢迷宮、3D 彩繪、咚咚鼓、大陀螺。小朋友放電好去處！</p>
           <div class="spot-details">
             <button class="spot-toggle" onclick="toggleSpot(this)">
@@ -1813,7 +1838,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-time">16:00</div>
         <div class="timeline-card">
-          <h3>濱海自行車道騎車</h3>
+          <h3><a href="spots/bike-trail.html" class="spot-link">濱海自行車道騎車</a></h3>
           <p>漁港周邊騎一小段，沿途有海景和風車。附近有 YouBike 2.0 站點可租車。</p>
           <div class="spot-details">
             <button class="spot-toggle" onclick="toggleSpot(this)">
@@ -1854,7 +1879,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-time">18:00</div>
         <div class="timeline-card">
-          <h3>梧棲中港觀光夜市</h3>
+          <h3><a href="spots/nightmarket.html" class="spot-link">梧棲中港觀光夜市</a></h3>
           <p>海線最大夜市，200+ 攤位，有吃有玩！免費停車場。夜市離飯店很近。</p>
           <div class="spot-details">
             <button class="spot-toggle" onclick="toggleSpot(this)">
@@ -1944,7 +1969,7 @@
         <div class="timeline-dot"></div>
         <div class="timeline-time">10:30</div>
         <div class="timeline-card">
-          <h3>國立自然科學博物館</h3>
+          <h3><a href="spots/science-museum.html" class="spot-link">國立自然科學博物館</a></h3>
           <p>恐龍廳、太空劇場，小朋友最愛！6 歲以下免門票，大人 $120。建議入館後先查太空劇場場次。</p>
           <div class="spot-details">
             <button class="spot-toggle" onclick="toggleSpot(this)">
@@ -1997,8 +2022,8 @@
         <div class="timeline-dot"></div>
         <div class="timeline-time">13:00</div>
         <div class="timeline-card">
-          <h3>全安堂台灣太陽餅博物館</h3>
-          <p>DIY 手作太陽餅！NT$250/人可做 6 個，建議事先預約。免費參觀百年老建築（科博館車程約 10 分鐘）。</p>
+          <h3><a href="spots/sunnycake.html" class="spot-link">全安堂台灣太陽餅博物館</a></h3>
+          <p>DIY 手作太陽餅！NT$300/人可做 6 個，建議事先預約（需滿 10 人開課，未滿 4 歲不接受）。免費參觀百年老建築（科博館車程約 10 分鐘）。</p>
           <div class="spot-details">
             <button class="spot-toggle" onclick="toggleSpot(this)">
               景點資訊 <span class="arrow">▼</span>
@@ -2023,7 +2048,7 @@
               </div>
               <div class="spot-chip">
                 <div class="spot-chip-label">DIY 費用</div>
-                NT$250/人（可做 6 個太陽餅）
+                NT$300/人（可做 6 個太陽餅）
               </div>
             </div>
           </div>
@@ -2065,10 +2090,10 @@
       <div class="cost-summary-title">💰 Day 3 預估花費</div>
       <div class="cost-row"><span>科博館門票（大人 ×1 + 兒童 ×1）</span><span class="cost-amount">~NT$180</span></div>
       <div class="cost-row"><span>太空劇場（選配）</span><span class="cost-amount">~NT$300</span></div>
-      <div class="cost-row"><span>太陽餅 DIY（2 人份）</span><span class="cost-amount">NT$500</span></div>
+      <div class="cost-row"><span>太陽餅 DIY（2 人份）</span><span class="cost-amount">NT$600</span></div>
       <div class="cost-row"><span>午餐（4 人）</span><span class="cost-amount">~NT$600</span></div>
       <div class="cost-row"><span>國道過路費</span><span class="cost-amount">~NT$300</span></div>
-      <div class="cost-row total"><span>小計</span><span class="cost-amount">~NT$1,880</span></div>
+      <div class="cost-row total"><span>小計</span><span class="cost-amount">~NT$1,980</span></div>
       <div class="cost-note">* 6 歲以下科博館免費、4 歲免太空劇場票；金額為估算供參考</div>
     </div>
   </section>
