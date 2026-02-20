@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全安堂台灣太陽餅博物館 — 台中家庭旅行 2026</title>
+  <meta name="description" content="全安堂太陽餅博物館攻略：百年建築、DIY手作太陽餅體驗、親子伴手禮">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-navy: #0B1D3A;
+      --ocean-blue: #1565C0;
+      --sunset-coral: #FF7043;
+      --warm-sand: #F4E4C1;
+      --seafoam: #4DB6AC;
+      --soft-cream: #FFF8F0;
+      --white: #FFFFFF;
+      --text-dark: #1a1a2e;
+      --text-muted: #5a6377;
+      --shadow-sm: 0 2px 8px rgba(11, 29, 58, 0.08);
+      --shadow-md: 0 4px 20px rgba(11, 29, 58, 0.12);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      color: var(--text-dark);
+      background: var(--soft-cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Back button */
+    .back-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 29, 58, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .back-bar a {
+      color: var(--warm-sand);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .back-bar a:hover { color: #fff; }
+
+    /* Hero */
+    .spot-hero {
+      background: linear-gradient(135deg, var(--deep-navy) 0%, var(--ocean-blue) 100%);
+      padding: 80px 20px 60px;
+      text-align: center;
+      color: #fff;
+    }
+    .spot-hero .emoji { font-size: 3rem; margin-bottom: 12px; }
+    .spot-hero h1 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .spot-hero .subtitle {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Content */
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .section-block {
+      margin-bottom: 40px;
+    }
+    .section-block h2 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--sunset-coral);
+      display: inline-block;
+    }
+    .section-block h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ocean-blue);
+      margin: 16px 0 8px;
+    }
+    .section-block p, .section-block li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .section-block ul {
+      padding-left: 20px;
+    }
+    .section-block li {
+      margin-bottom: 6px;
+    }
+
+    /* Blog card */
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(11, 29, 58, 0.06);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .blog-card .blog-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--deep-navy);
+      margin-bottom: 4px;
+    }
+    .blog-card .blog-title a {
+      color: var(--ocean-blue);
+      text-decoration: none;
+    }
+    .blog-card .blog-title a:hover {
+      text-decoration: underline;
+    }
+    .blog-card .blog-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .blog-card .blog-summary {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Tips box */
+    .tips-box {
+      background: linear-gradient(135deg, #E3F2FD 0%, #E8F5E9 100%);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      margin: 16px 0;
+      border-left: 4px solid var(--seafoam);
+    }
+    .tips-box h3 {
+      color: var(--deep-navy) !important;
+      margin-top: 0 !important;
+    }
+    .tips-box li {
+      color: var(--text-dark) !important;
+    }
+
+    /* Info chips */
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .info-chip {
+      background: var(--white);
+      border: 1px solid rgba(11, 29, 58, 0.08);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .info-chip strong {
+      color: var(--deep-navy);
+    }
+
+    /* Footer */
+    .spot-footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(11, 29, 58, 0.06);
+    }
+    .spot-footer a {
+      color: var(--ocean-blue);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="back-bar">
+    <a href="../index.html">← 回到行程總覽</a>
+  </div>
+
+  <div class="spot-hero">
+    <div class="emoji">☀️</div>
+    <h1>全安堂台灣太陽餅博物館</h1>
+    <p class="subtitle">百年老建築裡手作太陽餅，帶回最美味的伴手禮</p>
+  </div>
+
+  <div class="content">
+
+    <!-- 基本資訊 -->
+    <div class="section-block">
+      <h2>基本資訊</h2>
+      <div class="info-row">
+        <span class="info-chip">📍 <strong>地址</strong>台中市中區台灣大道一段 145 號</span>
+        <span class="info-chip">🌐 <strong>官網</strong>sunnycake.tw</span>
+        <span class="info-chip">🕐 <strong>營業</strong>08:00 ~ 20:00</span>
+        <span class="info-chip">📞 <strong>電話</strong>(04) 2229-5559</span>
+      </div>
+    </div>
+
+    <!-- 精選遊記 -->
+    <div class="section-block">
+      <h2>精選遊記</h2>
+
+      <div class="blog-card">
+        <div class="blog-title"><a href="https://www.welcometw.com/%E5%85%A8%E5%AE%89%E5%A0%82%E5%8F%B0%E7%81%A3%E5%A4%AA%E9%99%BD%E9%A4%85%E5%8D%9A%E7%89%A9%E9%A4%A8/" target="_blank" rel="noopener">全安堂太陽餅博物館</a></div>
+        <div class="blog-meta">好好玩 FUNIT</div>
+        <div class="blog-summary">免費參觀百年老建築，DIY手作太陽餅體驗</div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-title"><a href="https://www.kkday.com/zh-tw/blog/134987/asia-taiwan-taichung-sun-cake-museum" target="_blank" rel="noopener">台中太陽餅博物館</a></div>
+        <div class="blog-meta">KKday</div>
+        <div class="blog-summary">DIY體驗心得與百年建築歷史</div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-title"><a href="https://travel.taichung.gov.tw/zh-tw/attractions/intro/1063" target="_blank" rel="noopener">全安堂</a></div>
+        <div class="blog-meta">臺中觀光旅遊網</div>
+        <div class="blog-summary">官方景點介紹，建築為日治時期1909年建造</div>
+      </div>
+    </div>
+
+    <!-- 建築歷史 -->
+    <div class="section-block">
+      <h2>建築歷史</h2>
+      <ul>
+        <li>建於 <strong>1909 年</strong>（日治時期），原為「全安堂」藥房</li>
+        <li><strong>巴洛克式建築</strong>風格，為台中市定古蹟</li>
+        <li>2014 年轉型為太陽餅博物館</li>
+        <li>免費參觀，展示太陽餅歷史與台中糕餅文化</li>
+      </ul>
+    </div>
+
+    <!-- DIY 手作太陽餅 -->
+    <div class="section-block">
+      <h2>DIY 手作太陽餅</h2>
+      <ul>
+        <li><strong>費用</strong>：NT$300/人（大人小孩同價）</li>
+        <li><strong>場次</strong>：10:00 ~ 15:00（整點一場）</li>
+        <li><strong>每場上限</strong>：30 人，最少 10 人開課</li>
+        <li><strong>活動時長</strong>：1 小時 10 分（含烤餅）</li>
+        <li><strong>預約</strong>：線上表單 或 電話 (04)2229-5559</li>
+        <li>⚠️ <strong>重要</strong>：未滿 4 歲不接受預約</li>
+      </ul>
+    </div>
+
+    <!-- 親子提醒 -->
+    <div class="tips-box">
+      <h3>親子提醒</h3>
+      <ul>
+        <li>4歲小朋友剛好符合最低年齡限制（未滿4歲不收）</li>
+        <li>費用已漲至 NT$300/人（非之前的 NT$250）</li>
+        <li>最少 10 人才開課，建議事先預約確認</li>
+        <li>開課前一天會電話確認</li>
+        <li>可搭配台中火車站周邊散步</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer class="spot-footer">
+    <a href="../index.html">← 回到行程總覽</a> ｜ 台中家庭旅行 2026
+  </footer>
+</body>
+</html>
