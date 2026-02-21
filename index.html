@@ -1073,6 +1073,156 @@
       }
     }
 
+    /* ========== Travel Notes (遊記) ========== */
+    .travel-note {
+      margin-top: 16px;
+      background: linear-gradient(135deg, rgba(21, 101, 192, 0.03), rgba(77, 182, 172, 0.04));
+      border: 1px solid rgba(21, 101, 192, 0.08);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .travel-note-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 1px solid rgba(255, 112, 67, 0.25);
+      color: var(--sunset-coral);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-family: 'Noto Sans TC', sans-serif;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      margin-top: 12px;
+    }
+
+    .travel-note-toggle:hover {
+      background: rgba(255, 112, 67, 0.06);
+      border-color: var(--sunset-coral);
+    }
+
+    .travel-note-toggle .arrow {
+      transition: transform 0.3s ease;
+      font-size: 0.7rem;
+    }
+
+    .travel-note-toggle.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .travel-note-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .travel-note-body.open {
+      max-height: 3000px;
+      opacity: 1;
+    }
+
+    .travel-note-inner {
+      padding: 20px 24px;
+    }
+
+    .travel-note-index {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(11, 29, 58, 0.06);
+    }
+
+    .travel-note-index a {
+      font-size: 0.75rem;
+      color: var(--ocean-blue);
+      background: rgba(21, 101, 192, 0.06);
+      padding: 3px 10px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .travel-note-index a:hover {
+      background: var(--ocean-blue);
+      color: var(--white);
+    }
+
+    .tn-section {
+      margin-bottom: 14px;
+    }
+
+    .tn-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .tn-section-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tn-section p,
+    .tn-section li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .tn-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tn-section li {
+      padding: 2px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .tn-section li::before {
+      content: '·';
+      position: absolute;
+      left: 4px;
+      font-weight: 700;
+      color: var(--sunset-coral);
+    }
+
+    .tn-warn {
+      background: rgba(255, 112, 67, 0.06);
+      border-left: 3px solid var(--sunset-coral);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      margin-top: 4px;
+    }
+
+    .tn-warn li::before {
+      content: '⚠';
+      font-size: 0.7rem;
+    }
+
+    .tn-food {
+      background: rgba(77, 182, 172, 0.06);
+      border-left: 3px solid var(--seafoam);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      margin-top: 4px;
+    }
+
+    .tn-food li::before {
+      content: '🍽';
+      font-size: 0.7rem;
+    }
+
     /* ========== Trip Overview ========== */
     .overview-section {
       background: var(--white);
@@ -1625,6 +1775,52 @@
               </div>
             </div>
           </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">親子體驗</a>
+                  <a href="#" onclick="return false">停留時間</a>
+                  <a href="#" onclick="return false">打卡點</a>
+                  <a href="#" onclick="return false">避坑提醒</a>
+                  <a href="#" onclick="return false">美食</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🎯 親子體驗重點</div>
+                  <p>木棧道全長 691 公尺，來回約 30 分鐘，沿途可觀察招潮蟹、彈塗魚。棧道盡頭「永續利用區」可下水踩泥巴，是孩子最愛的環節。遊客中心有 VR 互動遊戲和 360 度環繞劇場，適合等夕陽前先帶小孩消磨時間。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⏱ 建議停留</div>
+                  <p>純走棧道約 30 分鐘；含遊客中心、景觀橋、玩水拍照，建議預留 2～3 小時。下午 4～5 點抵達最佳，可銜接日落。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">📸 拍照打卡點</div>
+                  <ul>
+                    <li>景觀橋（265 公尺雙弧斜張橋）</li>
+                    <li>大風車步道</li>
+                    <li>棧道盡頭夕陽倒映水面（天空之鏡效果）</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 避坑提醒</div>
+                  <ul class="tn-warn">
+                    <li>務必出發前查潮汐表，漲潮前 1.5 小時木棧道封閉，沒查好會白跑</li>
+                    <li>風超大，帽子選有繫帶的，物品被吹落濕地會被罰款</li>
+                    <li>想讓小孩下水一定帶拖鞋和塑膠袋，穿球鞋只能乾瞪眼</li>
+                    <li>木棧道全程無遮陽，防曬要做足</li>
+                    <li>停車找有廁所和沖腳區的場地（遊客中心 50 元/次）</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🍽 附近美食</div>
+                  <p>附近覓食選項不多，可至三井 OUTLET 用餐或梧棲漁港吃海鮮，車程約 10～15 分鐘。</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1743,6 +1939,57 @@
               </div>
             </div>
           </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">必看展區</a>
+                  <a href="#" onclick="return false">停留時間</a>
+                  <a href="#" onclick="return false">打卡點</a>
+                  <a href="#" onclick="return false">避坑提醒</a>
+                  <a href="#" onclick="return false">餐飲</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🎯 小朋友最愛 &amp; 必看展區</div>
+                  <ul>
+                    <li>水母區人氣最高：5000 隻海月水母搭配 360 度光影投影，小孩會追著地板投影水母跑</li>
+                    <li>1 樓海洋學園互動區可召喚海龜、鯨鯊等生物，小朋友玩最久</li>
+                    <li>企鵝區可從隧道仰望企鵝肚子，但數量偏少（2～3 隻）</li>
+                    <li>4 樓濕地親水區可踩水，務必自備換洗衣物和毛巾</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⏱ 建議停留</div>
+                  <p>純逛約 2 小時；帶小孩玩互動區和親水區，建議抓 2.5～3 小時。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">📸 拍照打卡點</div>
+                  <ul>
+                    <li>水母投影區（最熱門）</li>
+                    <li>蓮型展缸仰角拍魚群</li>
+                    <li>黑潮之海大水槽前</li>
+                    <li>海盜隧道入口光影</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 避坑提醒</div>
+                  <ul class="tn-warn">
+                    <li>假日人潮多且有團客，推娃娃車等電梯很辛苦，建議早到</li>
+                    <li>停車場容易滿，會被引導到漁港停車場（步行約 6 分鐘）</li>
+                    <li>全館禁帶外食，門票無折抵消費</li>
+                    <li>海邊風大，注意帽子別被吹走</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🍽 餐飲建議</div>
+                  <p>館內 4 樓潮汐餐廳、5 樓藍鯊咖啡價格偏高且評價普通。建議出館後直接到旁邊梧棲漁港吃海鮮，選擇多、CP 值更高。</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1770,6 +2017,47 @@
               <div class="spot-chip">
                 <div class="spot-chip-label">電話</div>
                 <a href="tel:04-2657-1586">04-2657-1586</a>
+              </div>
+            </div>
+          </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">怎麼逛</a>
+                  <a href="#" onclick="return false">必吃美食</a>
+                  <a href="#" onclick="return false">避坑提醒</a>
+                  <a href="#" onclick="return false">親子友善</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🎯 逛法建議</div>
+                  <p>漁港分三區：美食攤販區（炸物、燒酒螺等小吃）、代客料理餐廳區（買魚貨請店家現煮）、鮮魚直銷區（採買生鮮）。入口處有大型立體海洋彩繪牆，小朋友會喜歡。建議先吃小吃、再逛魚貨。停留約 1.5～2.5 小時。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🍽 必吃美食</div>
+                  <ul class="tn-food">
+                    <li><strong>阿姿燒酒螺</strong>：20 年老店，鹹淡適中</li>
+                    <li><strong>阿鴻炸開了</strong>：炸龍珠、炸花枝、蝦猴酥，現炸酥脆</li>
+                    <li><strong>中港烤魷魚</strong>：2～3 隻 100 元，平價好吃</li>
+                    <li><strong>三姊妹魷魚絲</strong>：可試吃再買，適合當伴手禮</li>
+                    <li><strong>一鼎鱻</strong>（代客料理）：自家漁船直送，鮮蚵粥份量大</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 避坑提醒</div>
+                  <ul class="tn-warn">
+                    <li>假日車位難找，務必記好停車位置</li>
+                    <li>魚貨「貨比三家」，看清標價再出手；現場有免費公秤可確認重量</li>
+                    <li>不要隨意觸碰商品，確定要買再詢價</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">👶 親子友善度</div>
+                  <p>中上。有彩繪牆和船型裝置可拍照，小孩會覺得有趣。但假日人擠人需牽好小孩，推車較不方便。適合帶 4、7 歲短暫停留吃吃逛逛。</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1803,6 +2091,41 @@
               </div>
             </div>
           </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">設施</a>
+                  <a href="#" onclick="return false">打卡點</a>
+                  <a href="#" onclick="return false">注意事項</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🎯 設施與遊玩重點</div>
+                  <p>免費海洋主題公園，大鯨魚溜滑梯坡度平緩（4 歲也適合）、小型花園迷宮（草叢圍牆幼童闖關剛好）、3D 海洋地景彩繪（地上有標示最佳拍照位置，可拍出被鯊魚追的錯覺照）、彩虹座椅、攀爬繩網及童玩陀螺造景。場地開闊，也適合帶風箏。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">📸 拍照打卡點</div>
+                  <ul>
+                    <li>鯨魚溜滑梯正面</li>
+                    <li>3D 彩繪階梯區（站在指定位置拍最立體）</li>
+                    <li>彩虹座椅</li>
+                    <li>對面「頂寮ㄟ廊」彩虹隧道</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 注意事項</div>
+                  <ul class="tn-warn">
+                    <li>園區幾乎無遮蔭，晴天務必防曬備水</li>
+                    <li>海線風大，冬春季注意保暖防風</li>
+                    <li>遊具較簡單，大孩子可能覺得不夠玩</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1830,6 +2153,44 @@
               <div class="spot-chip">
                 <div class="spot-chip-label">備註</div>
                 小朋友坐親子座椅或自行帶兒童車，注意安全帽
+              </div>
+            </div>
+          </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">推薦路段</a>
+                  <a href="#" onclick="return false">打卡點</a>
+                  <a href="#" onclick="return false">避坑提醒</a>
+                  <a href="#" onclick="return false">租車</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🎯 推薦路段</div>
+                  <p>帶 4 歲和 7 歲小孩，首選<strong>高美濕地自行車道</strong>（僅 3.2 公里，來回約 40 分鐘），路程短、路況佳，沿途有風車、濕地景觀橋。全程 60 公里的濱海車道不建議帶幼童挑戰。海線整體平坦好騎，沿途可近距離看到巨大白色風車。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">📸 打卡點</div>
+                  <ul>
+                    <li>高美濕地 S 形景觀橋（橋上需牽車步行）</li>
+                    <li>木棧道與風車合影</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 避坑提醒</div>
+                  <ul class="tn-warn">
+                    <li>風超大，帽子能綁緊，穿防風外套</li>
+                    <li>台 17 線臨港路有段需與大車共用車道，帶小孩絕對避開</li>
+                    <li>無遮蔭路段多，防曬飲水備足</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🚲 租車資訊</div>
+                  <p>高美濕地停車場及遊客中心旁均有 YouBike 2.0 站點，悠遊卡或一卡通租借，前 4 小時每 30 分鐘 10 元。建議從第二停車場租車出發。</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1871,6 +2232,43 @@
               <div class="spot-chip">
                 <div class="spot-chip-label">電話</div>
                 <a href="tel:0971-212-127">0971-212-127</a>
+              </div>
+            </div>
+          </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">必吃美食</a>
+                  <a href="#" onclick="return false">親子友善</a>
+                  <a href="#" onclick="return false">避坑提醒</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🍽 必吃美食</div>
+                  <ul class="tn-food">
+                    <li><strong>九記煎餃水煎包</strong>：現桿現煎、外酥內爆汁，排隊王</li>
+                    <li><strong>鹿港脆皮蚵仔煎</strong>：建議內用吃酥脆口感</li>
+                    <li><strong>柯南臭豆腐</strong>：搭豬血湯百元有找</li>
+                    <li><strong>素蘭炸雞</strong>：起鍋秒殺級</li>
+                    <li><strong>高北牛乳大王</strong>木瓜牛奶</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">👶 親子友善度</div>
+                  <p>很適合帶小孩！走道寬到可推推車；遊戲區有電動車、套圈圈、打彈珠、撈魚、動力沙，小朋友容易玩到不想走。也有釣蝦體驗可現場烤來吃。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 避坑提醒</div>
+                  <ul class="tn-warn">
+                    <li>停車場免費但週六傍晚就滿，建議 18:00 前到或停童綜合醫院（步行 8～10 分鐘）</li>
+                    <li>熱門攤位容易提早完售，別太晚去買</li>
+                    <li>座位區偏少，帶小孩可能需要找位子</li>
+                    <li>務必先確認當天有營業（僅二、四、五、六）</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -1976,6 +2374,45 @@
               </div>
             </div>
           </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">必看展區</a>
+                  <a href="#" onclick="return false">推薦路線</a>
+                  <a href="#" onclick="return false">避坑提醒</a>
+                  <a href="#" onclick="return false">美食</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🎯 最適合小朋友的展區</div>
+                  <ul>
+                    <li>首推<strong>恐龍廳</strong>（生命科學廳內），7 公尺高機械暴龍會動會吼，光這區就要待半小時</li>
+                    <li>科學中心 B1「達達的魔法樂園」有互動遊戲，非常適合 4 歲幼兒</li>
+                    <li>科學中心全館免費，值得優先逛</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🗺 推薦路線（帶 4 歲 + 7 歲）</div>
+                  <p>科學中心 B1 達達魔法樂園（免費放電）→ 生命科學廳恐龍區（買票進場）→ 若還有體力再逛人類文化廳。注意：人類文化廳的木乃伊展區可能嚇到 4 歲小孩，可斟酌跳過。帶小小孩建議聚焦 2.5～3 小時。手上蓋章可自由進出。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 避坑提醒</div>
+                  <ul class="tn-warn">
+                    <li>假日人潮非常多，停車場容易客滿，建議開館就到</li>
+                    <li>4F 物理世界、5F 幼兒科學園需預約，提前上網登記</li>
+                    <li>館很大走很多路，帶推車會方便些</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🍽 美食</div>
+                  <p>館內 B1「紙箱王博館店」用餐滿 100 元可搭紙火車，小孩很喜歡。附近也有知名的「屋馬燒肉」但需提前訂位。</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2026,6 +2463,47 @@
               </div>
             </div>
           </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">DIY 流程</a>
+                  <a href="#" onclick="return false">打卡點</a>
+                  <a href="#" onclick="return false">避坑提醒</a>
+                  <a href="#" onclick="return false">周邊順遊</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🎯 DIY 體驗流程</div>
+                  <p>每人分到 3 塊外皮、6 塊內餡和擀麵棍，跟著師傅將油皮包油酥、擀捲對切、包入麥芽糖餡、壓扁塑型，最後送進烤箱。全程約 1 小時（含烘烤），每人做 6 顆。<strong>小朋友完全可以自己動手</strong>，師傅逐一指導，4 歲以上就能參與，成就感滿滿。建議停留 2～2.5 小時（等烤餅的 30～40 分鐘可逛二樓博物館）。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">📸 打卡點</div>
+                  <ul>
+                    <li>百年辰野式紅磚建築外觀</li>
+                    <li>門口太陽餅熊與復古腳踏車</li>
+                    <li>二樓互動投影區</li>
+                    <li>巷弄鉤織裝置藝術</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 避坑提醒</div>
+                  <ul class="tn-warn">
+                    <li>須滿 4 人開課，務必提前線上或電話預約</li>
+                    <li>製作速度太慢餅皮會偏硬，跟緊師傅節奏</li>
+                    <li>包餡別玩花樣，否則內餡烤到流光</li>
+                    <li>出爐餅很燙，小心孩子</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🗺 周邊順遊</div>
+                  <p>步行 7 分鐘到台中火車站、繼光商圈、台中市役所。附近太陽餅老店林立，適合比較選購伴手禮。</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2054,6 +2532,42 @@
               <div class="spot-chip">
                 <div class="spot-chip-label">導航</div>
                 <a href="https://maps.google.com/?q=大甲鎮瀾宮" target="_blank" rel="noopener">開啟 Google Maps ↗</a>
+              </div>
+            </div>
+          </div>
+          <button class="travel-note-toggle" onclick="toggleSpot(this)">
+            遊記精華 <span class="arrow">▼</span>
+          </button>
+          <div class="travel-note-body">
+            <div class="travel-note">
+              <div class="travel-note-inner">
+                <div class="travel-note-index">
+                  <a href="#" onclick="return false">參觀重點</a>
+                  <a href="#" onclick="return false">避坑提醒</a>
+                  <a href="#" onclick="return false">必吃美食</a>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🎯 參觀體驗重點</div>
+                  <p>廟內提供環保金紙與香，自由樂捐即可。帶小孩建議走馬觀花式參拜，廟口有 Q 版大甲媽公仔可合影。廟宇有輪椅通道，推推車也方便。參拜加逛廟口商圈約 1～1.5 小時。</p>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">⚠️ 避坑提醒</div>
+                  <ul class="tn-warn">
+                    <li>假日停車困難，導航到「中山路地下停車場」或文昌國小停車場</li>
+                    <li>熱門小吃要排隊，可先買芋香包再去參拜</li>
+                    <li>避開媽祖遶境期間（農曆三月），否則人山人海</li>
+                  </ul>
+                </div>
+                <div class="tn-section">
+                  <div class="tn-section-title">🍽 周邊必吃</div>
+                  <ul class="tn-food">
+                    <li><strong>一品香水煎包</strong>：15 元/顆，秒殺級</li>
+                    <li><strong>大甲芋香包</strong>：芋頭絲 + 肉 + 花生粉</li>
+                    <li><strong>五甲地香酥芋泥球</strong>：現炸酥脆</li>
+                    <li><strong>嘉家樂脆皮肉圓</strong>：在地人推薦</li>
+                    <li><strong>裕珍馨奶油酥餅</strong>：伴手禮首選</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
